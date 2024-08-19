@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机邮箱导航页面</title>
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+        }
+  
+        li {
+            list-style: none;
+        }
+  
+        body {
+            font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+            color: #333;
+        }
+  
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        html,body,div,span,h1,a,ul,li,nav{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        body{
+            line-height: 1em;
+            line-height: 1em;
+            background: #F4F4F4;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: lighter;
+        }
+        .l-main{
+            width: 530px;
+            margin: 0 auto;
+        }
+        .menu{
+            width: 250px;
+            margin: 40px;
+            background: #ffffff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.3);/*盒子阴影：水平方向 0px，垂直方向 1px，模糊程度 4px，黑色透明度 30%*/
+            border-radius: 5px;/*边框圆角 5px*/
+            float: left;
+        }
+        .myMail{
+            background: #4B4F55;
+            border-bottom: 1px solid #353A40;
+            border-radius: 5px 5px 0 0;
+        }
+        .myMail_title{
+            color: #ffffff;
+            padding: 15px;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.4);
+        }
+        .myNav{
+            border-radius: 0 0 5px 5px;
+        }
+        .nav{
+            list-style: none;
+        }
+        .nav_item{
+            position: relative;
+        }
+        .nav_item-link{
+            padding: 10px 15px;/*内边距：上下为 10px，左右为 1px*/
+            text-decoration: none;
+            color: #8B8E93;
+            display: block;
+            border-bottom: 1px solid #F0F0F0;
+        }
+        .nav_item-link:hover{
+            background: #F0F0F0;
+        }
+        .nav_item-link.is-active{
+            background: #6E757F;
+            color: #ffffff;
+            border-bottom-color: #4B4F55;
+            box-shadow: 0 1px 0 #7B828D inset;
+        }
+        .nav_item-link.is-active:after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            margin-top: -6px;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 6px solid #6E757F;
+        }
+        .nav_item-link.is-active{
+            color: #ffffff;
+        }
+        .nav_item:last-child .nav_item-link{
+            border-bottom: none;
+        }
+        .nav_item-icon{
+            width: 20px;
+            text-align: center;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        .badge{
+            font-size: 12px;
+            padding: 2px 8px;
+            border: 1px solid #D1D1D1;
+            border-radius: 10px;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        .badge-warning{
+            background: #ED373F;
+            border-color: #ffffff;
+        }
+        .fa-flag{
+            color: red;
+        }
+        .fa-space-shuttle{
+            color: #508049;
+        }
+        .fa-archive{
+            color: orange;
+        }
+        .fa-envelope{
+            color: #35b3ff;
+        }
+    </style>
+</head>
+<body>
+<div class="l-main">
+    <div class="menu">
+        <header class="myMail">
+            <h1 class="myMail_title">我的邮箱</h1>
+        </header>
+        <nav class="myNav">
+            <ul class="nav">
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link is-active">
+                        <i class="fa fa-envelope nav_item-icon"></i>
+                        <span class="nav_item-text">收件箱</span>
+                        <span class="badge badge-warning">32</span>
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link ">
+                        <i class="fa fa-flag nav_item-icon"></i>
+                        <span class="nav_item-text">红旗邮件</span>
+                        <span class="badge">7</span>
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link ">
+                        <i class="fa fa-space-shuttle nav_item-icon"></i>
+                        <span class="nav_item-text">已发送</span>
+                        <span class="badge">0/17</span>
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link ">
+                        <i class="fa fa-archive nav_item-icon"></i>
+                        <span class="nav_item-text">草稿箱</span>
+                        <span class="badge">2</span>
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link ">
+                        <i class="fa fa-trash nav_item-icon"></i>
+                        <span class="nav_item-text">已删除</span>
+                        <span class="badge">5</span>
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#" class="nav_item-link ">
+                        <span class="nav_item-text">所有邮件   范艺林</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>
